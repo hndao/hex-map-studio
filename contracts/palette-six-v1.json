@@ -1,0 +1,44 @@
+{
+  "paletteId": "hex-palette-six-v1",
+  "sourceRevision": "r03",
+  "status": "working-values-native-rendered-human-review-pending",
+  "colors": [
+    {
+      "colorId": 1,
+      "key": "teal",
+      "baseColorHex": "#08B6BC",
+      "accessibilityCue": "dot"
+    },
+    {
+      "colorId": 2,
+      "key": "amber",
+      "baseColorHex": "#F9B915",
+      "accessibilityCue": "double-dot"
+    },
+    {
+      "colorId": 3,
+      "key": "coral",
+      "baseColorHex": "#F35664",
+      "accessibilityCue": "dash"
+    },
+    {
+      "colorId": 4,
+      "key": "violet",
+      "baseColorHex": "#9A48E5",
+      "accessibilityCue": "cross"
+    },
+    {
+      "colorId": 5,
+      "key": "sky-blue",
+      "baseColorHex": "#2788EF",
+      "accessibilityCue": "ring"
+    },
+    {
+      "colorId": 6,
+      "key": "mint",
+      "baseColorHex": "#72CD72",
+      "accessibilityCue": "triangle"
+    }
+  ],
+  "exactColorsUserApproved": false
+}

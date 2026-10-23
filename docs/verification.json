@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-23",
+  "version": "0.1.0",
+  "scope": "Local authoring tool, standalone game source and cross-language data checks; not a playable Unity scene or device acceptance.",
+  "coreTests": {
+    "command": "npm test",
+    "passed": 8,
+    "failed": 0,
+    "seededIrregularLayouts": 100,
+    "maximumCells": 4096
+  },
+  "browser": {
+    "result": "HEX_MAP_STUDIO_BROWSER_OK",
+    "checks": [
+      "unverified export disabled",
+      "demo validates and enables export",
+      "parameter edit invalidates export",
+      "invalid timer blocked",
+      "real local image decoded and sampled into hex targets",
+      "actual browser-downloaded JSON and witness replay",
+      "dense map export has no image field",
+      "canvas erase and undo update target data and invalidate export",
+      "paint edits one target cell, rebalances initial colors and revalidates",
+      "stale sampling settings cannot export",
+      "390px viewport has no horizontal overflow",
+      "no browser console or page errors"
+    ],
+    "cells": 960,
+    "witnessCommands": 635,
+    "browser": "headless Chromium",
+    "unityExecuted": false,
+    "deviceExecuted": false
+  },
+  "consumer": {
+    "result": "HEX_COLOR_SORT_JSON_PICTURE_OK",
+    "checksPassed": 151,
+    "witnessLevels": 4,
+    "witnessCommandsReplayed": 5551,
+    "scope": "Standalone loader/BFS/atomic board commands; spare steps are an offline verification model, not a delivered runtime spare session."
+  },
+  "sourceCompiler": {
+    "assemblies": 6,
+    "unityEditorExecuted": false
+  },
+  "contractParity": "Schema and palette copies compared byte-for-byte to consumer; sample copy and task DAG verified. Used existing restricted schema keyword validator plus authoritative C# loader, not a general JSON Schema package.",
+  "sourceSha256": {
+    "index.html": "79c816eab7ace365622232753c4fe68f1d44ee2c7741f7efdfd4af30cde600b1",
+    "server.mjs": "4f7ca6dfeff3bb32ea07fa048f752ced8f30df10ccf4218a1be16094e9d163ab",
+    "package.json": "3a192c16f9c7dd674b692fbfe63ea98ad4a1fc47edd56b627420108bf4493629",
+    "src/app.js": "9385c0b9f42926a0e80d988d0c6f98a4656369d49465fa766c7fe3f88114daae",
+    "src/core.js": "9c7bc96f50fc52bd0a20d0773cfcd250648e10b4a87d5160654d4ccba1f56ff7",
+    "src/style.css": "eb48c7ee248335f8c0b2c8e5f6a1159e00ac23d9d873b94ba698add62c80335d",
+    "contracts/level-v2.schema.json": "12d443f64c33301b62dfd0595e765dbf8c43d3fea8776ee95853c6db24e0b24e",
+    "contracts/palette-six-v1.json": "93c7bf5aaa8be06a57f53858805f4299363a289b824ab85ac133dec1f6e44290"
+  },
+  "limitations": [
+    "Only the six existing shared sprite colors are exported; no white/cream palette extension.",
+    "Spare witness steps are an offline model; runtime spare/session/UI remain future tasks.",
+    "No Unity import/Test Runner/build/device or human visual acceptance.",
+    "QA input images/captures/downloads are ignored and not shipped or committed."
+  ]
+}

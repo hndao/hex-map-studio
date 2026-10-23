@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hex Color Sort JSON picture level v2",
+  "description": "Standalone picture geometry, targets and initial inventory. No per-level image/mask/art reference. Strict integer tokens and semantic inventory checks apply.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 2
+    },
+    "contentKind": {
+      "type": "string",
+      "const": "hex-picture-level"
+    },
+    "rulesetId": {
+      "type": "string",
+      "const": "hex-relaxed-partial-v1"
+    },
+    "levelId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,63}$"
+    },
+    "grid": {
+      "type": "string",
+      "const": "flat-top-axial"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "paletteId": {
+      "type": "string",
+      "const": "hex-palette-six-v1"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "relaxed",
+        "timed"
+      ]
+    },
+    "timerSeconds": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 600
+    },
+    "spare": {
+      "type": "object",
+      "properties": {
+        "totalSlots": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 7
+        },
+        "initialUnlockedSlots": {
+          "type": "integer",
+          "const": 3
+        }
+      },
+      "required": [
+        "totalSlots",
+        "initialUnlockedSlots"
+      ],
+      "additionalProperties": false
+    },
+    "revive": {
+      "type": "object",
+      "properties": {
+        "maximumPerAttempt": {
+          "type": "integer",
+          "const": 1
+        },
+        "addedSeconds": {
+          "type": "integer",
+          "const": 60
+        }
+      },
+      "required": [
+        "maximumPerAttempt",
+        "addedSeconds"
+      ],
+      "additionalProperties": false
+    },
+    "rewardPolicyId": {
+      "type": "string",
+      "const": "first-clear-v1"
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4096,
+      "items": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "integer",
+            "minimum": -128,
+            "maximum": 128
+          },
+          "r": {
+            "type": "integer",
+            "minimum": -128,
+            "maximum": 128
+          },
+          "targetColorId": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          },
+          "initialBeanColorId": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6
+          }
+        },
+        "required": [
+          "q",
+          "r",
+          "targetColorId",
+          "initialBeanColorId"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "contentKind",
+    "rulesetId",
+    "levelId",
+    "grid",
+    "seed",
+    "paletteId",
+    "mode",
+    "timerSeconds",
+    "spare",
+    "revive",
+    "rewardPolicyId",
+    "cells"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+.artifacts/
+input/
+output/
+*.log
+.env*
+!*.md
+!docs/
+!docs/**

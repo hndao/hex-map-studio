@@ -1,0 +1,12 @@
+{
+  "name": "hex-map-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local image-to-JSON authoring tool for Hex Color Sort",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

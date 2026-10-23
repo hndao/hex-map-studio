@@ -1,0 +1,91 @@
+:root{font-family:"Avenir Next","Segoe UI",sans-serif;color:#183d3b;background:#edf2ef;font-synthesis:none;font-size:14px}
+*{box-sizing:border-box}
+body{margin:0}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.45}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,canvas:focus-visible{outline:3px solid #087f80;outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h1{font-size:22px;letter-spacing:-.6px}
+h2{font-size:16px;font-weight:650}
+h3{font-size:14px;font-weight:650}
+.app-header{display:flex;justify-content:space-between;align-items:center;padding:23px 30px;border-bottom:1px solid #cddbd4;background:#fff}
+.brand{display:flex;gap:13px;align-items:center}
+.brand-mark{font-size:45px;color:#087f80;line-height:1}
+.brand p{font-size:12px;color:#617470;margin-top:3px}
+.local-note{font-size:12px;color:#47635b;background:#eaf3ee;padding:9px 13px;border-radius:6px}
+.workspace{display:grid;grid-template-columns:250px minmax(330px,1fr) 266px;gap:18px;max-width:1740px;margin:22px auto;padding:0 24px}
+.panel{background:#fff;border:1px solid #d8e2dc;border-radius:12px;padding:21px 18px;align-self:start}
+.panel h2:not(:first-child){margin-top:26px}
+.panel h2{margin-bottom:15px}
+label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:600;margin-bottom:15px}
+input:not([type=file]):not([type=range]):not([type=checkbox]),select{width:100%;height:39px;border:1px solid #c7d5ce;border-radius:6px;padding:7px 10px;color:#183d3b;background:#fff}
+input[type=file]{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+input[type=range]{width:100%;accent-color:#087f80}
+label.upload{border:1px dashed #93b5a8;border-radius:9px;min-height:137px;align-items:center;justify-content:center;background:#f5f9f6;cursor:pointer;gap:7px;font-weight:400;text-align:center}
+body:has(#image-file:focus-visible) .upload{outline:3px solid #087f80;outline-offset:3px}
+.upload span:last-child{font-size:11px;color:#617470}
+.upload-icon{font-size:29px;line-height:1;color:#087f80}
+.help{font-size:11px;line-height:1.65;color:#617470;margin:0 0 15px;overflow-wrap:anywhere}
+.field-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.range-label output{align-self:flex-end;font-weight:500;margin-top:-23px;color:#087f80}
+.palette{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:13px}
+.palette label{flex-direction:row;align-items:center;gap:6px;background:#f7f9f7;border:1px solid #e3eae5;border-radius:6px;padding:8px 5px;margin:0;font-size:11px;cursor:pointer;font-weight:500}
+.palette input{accent-color:#087f80;margin:0;width:13px;height:13px}
+.swatch{display:inline-block;flex-shrink:0;width:14px;height:16px;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.button{border:1px solid #c6d6cd;border-radius:6px;padding:10px 13px;background:#fff;color:#183d3b;font-weight:600;font-size:12px}
+.button:hover:not(:disabled){background:#e8f1ec}
+.button.primary{background:#087f80;border-color:#087f80;color:white}
+.button.primary:hover:not(:disabled){background:#066d6e}
+.button.secondary{background:#f1f6f2}
+.button.wide{width:100%;margin-bottom:9px}
+.button.small{padding:7px 10px;white-space:nowrap}
+.text-button{border:0;background:transparent;color:#397164;padding:9px 0;font-size:12px;text-decoration:underline}
+.canvas-panel{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #d8e2dc;border-radius:12px;overflow:hidden}
+.board-header{padding:19px 20px 13px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.board-header p{font-size:11px;color:#617470;margin-top:5px}
+.view-tabs{display:flex;gap:3px;padding:0 18px 14px;flex-wrap:wrap}
+.view-tabs button{background:transparent;border:0;color:#617470;border-radius:5px;padding:8px 12px;font-size:12px}
+.view-tabs button[aria-pressed=true]{background:#def0e9;color:#145f55;font-weight:650}
+.canvas-wrap{position:relative;background:#e1e9e4;min-height:450px;height:calc(100vh - 290px);max-height:900px;overflow:hidden}
+canvas{display:block;width:100%;height:100%;touch-action:none}
+.canvas-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-size:10px;background:#fffffff0;color:#617470;padding:6px 10px;border-radius:5px;white-space:nowrap;pointer-events:none}
+.edit-bar{display:flex;gap:10px;align-items:end;flex-wrap:wrap;padding:13px 18px;border-bottom:1px solid #e2eae5}
+.edit-bar label{margin:0;flex:1;min-width:105px;max-width:160px;font-size:10px;gap:4px}
+.edit-bar select{height:32px;font-size:11px;padding:5px 7px}
+.map-summary{display:flex;flex-wrap:wrap;gap:20px;padding:14px 20px;color:#617470;font-size:11px}
+.map-summary strong{color:#183d3b;font-size:17px;display:block;margin-bottom:2px}
+.check-box{background:#eff6f2;border-radius:8px;padding:14px;margin:22px 0 15px}
+.check-box p{font-size:12px;line-height:1.65;color:#47635b;margin:8px 0 13px}
+.check-box[data-state=error]{background:#fff0ea}
+.check-box[data-state=error] p{color:#9a3b22}
+.check-box[data-state=success]{background:#e0f3e8}
+.check-box .button{margin:0}
+.export-note{margin-top:4px}
+.export details{border-top:1px solid #e2eae5;padding-top:13px;font-size:11px}
+.export summary{cursor:pointer}
+pre{font-size:10px;overflow:auto;max-height:250px;color:#47635b;white-space:pre-wrap;word-break:break-all}
+.app-footer{font-size:11px;color:#617470;padding:0 26px 18px;text-align:center}
+[hidden]{display:none!important}
+@media(min-width:1500px){.workspace{grid-template-columns:270px minmax(500px,1fr) 286px}
+}
+@media(max-width:1100px){.workspace{grid-template-columns:220px minmax(0,1fr);padding:0 14px;gap:14px}
+.export{grid-column:1/-1}
+.canvas-wrap{height:650px}
+.local-note{max-width:200px;text-align:center}
+}
+@media(max-width:650px){.app-header{padding:16px}
+.local-note{display:none}
+.workspace{display:flex;flex-direction:column;margin-top:14px}
+.panel,.canvas-panel{width:100%}
+.inputs{order:0}
+.canvas-panel{order:1}
+.export{order:2}
+.canvas-wrap{height:520px;min-height:400px}
+.board-header{padding:16px}
+.board-header p{max-width:220px}
+.edit-bar{gap:7px}
+.canvas-hint{font-size:9px}
+.app-footer{line-height:1.7}
+.palette{grid-template-columns:repeat(3,1fr)}
+}
